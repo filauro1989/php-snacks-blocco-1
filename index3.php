@@ -5,15 +5,18 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
 function getArrayNumbers ($min, $max, $nItems) {
     $generatedNumbers = [];
 
+    // finche l'array generatedNumbers è minore del limite di numeri inserito
     while(count($generatedNumbers) < $nItems) {
+        // creo variabile randomNumber in cui inserisco un numero random decidendo gli estremi
         $randomNumber = rand($min, $max);
+        // se l'array non contiene il numero random generato allora inserisci il suddetto in generatedNumbers
         if (!in_array($randomNumber, $generatedNumbers)) {
             $generatedNumbers[] = $randomNumber;
         }
     }
-
+    // la funziona ritorna l'array di numeri generati
     return $generatedNumbers;
-}
+};
 
 $numeri = getArrayNumbers(1, 100, 15);
 
