@@ -38,7 +38,7 @@
     
     <div class="green-sq">
 
-        <?php foreach($db as $key => $data){ s
+        <?php foreach($db as $key => $data){
             if ($key === 'teachers') {
                 foreach($data as $teacher){
                     echo ($teacher['name']);
